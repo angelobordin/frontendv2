@@ -1,0 +1,23 @@
+<div class="container">
+    <form [formGroup]="form">
+
+        <div class="row">
+            <div class="col-6 form-group">
+                <label for="name">Nome do Colaborador</label>
+                <input type="text" class="form-control" id="name" name="name" formControlName="name" maxlength="100"
+                    minlength="1">
+            </div>
+            <div class="col-6 form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" class="form-control" id="cpf" formControlName="cpf" maxlength="14"
+                    mask="000.000.000-00">
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+            <button [disabled]="!this.form.valid" class="btn btn-primary" type="submit" (click)="registerColaborator()">
+                Cadastrar
+            </button>
+        </div>
+    </form>
+</div>
