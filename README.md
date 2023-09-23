@@ -1,27 +1,57 @@
-# Frontend
+<h1>Frontend - V2</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+<p>
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-brightgreen"/>
+  <img src="https://img.shields.io/badge/última%20atualização-setembro-yellowgreen"/>
+  <img src="https://img.shields.io/badge/Node.JS-18.12.1-blueviolet"/>
+  <img src="https://img.shields.io/badge/Angular-14.0.3-red"/>
+</p>
 
-## Development server
+<h2>Descrição</h2>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Versão atualizada do projeto Frontend para nosso projeto de [API](https://github.com/angelobordin/api)<br>
+<br>
 
-## Code scaffolding
+<h2>Funcionalidades</h2>
+<h3>Implementadas :heavy_check_mark:</h3>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-   `Cadastro de Usuários e Login`: O projeto possui tela de cadastro e login para os usuários.
 
-## Build
+<h2>Acesso ao projeto 📁</h2>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Você pode [acessar o código fonte do projeto inicial aqui](https://github.com/angelobordin/frontendv2/tree/master), ou [baixá-lo aqui](https://github.com/angelobordin/frontendv2/archive/refs/heads/master.zip).
 
-## Running unit tests
+<h2>Abrir e rodar o projeto 🛠️</h2>
+<h3>Pré-Requisitos</h3>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+⚠️ [Node](https://nodejs.org/en/)<br>
+⚠️ [Angular](https://angular.io/)<br>
 
-## Running end-to-end tests
+Após baixar o projeto no seu dispositivo, você pode abri-lo no VS Code.<br>
+Para isso abra o VS Code em seu dispositivo, após clique em:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<h3>VS Code</h3>
 
-## Further help
+-   _File >> Open Folder..._ ou digite _Ctrl+K_ / _Ctrl+O_;
+-   Abra o terminal em _Terminal >> New Terminal_;
+-   Digite _npm install_ para realizar a instalação das dependências do projeto;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Após todos os passo acima serem realizados, digite _npm run start_ no seu terminal e o projeto será aberto no seu navegador.
+
+<h2>Tecnologias Utilizadas</h2>
+
+<ul>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-plain.svg" width="20" height="20"/><b> Visual Studio Code</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="20" height="20"/><b> Node.JS</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="20" height="20"/><b> TypeScript</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" width="20" height="20"/><b> Angular</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="20" height="20"/><b> Bootstrap</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20" height="20"/><b> HTML 5</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="20" height="20"/><b> CSS 3</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="20" height="20"/><b> Git</b></li>
+</ul>
+
+# Autores
+
+| [<img src="https://avatars.githubusercontent.com/u/70332789?s=400&u=c6b947894c97e0e941f64aafeb22719ff49589ac&v=4" width=115><br><sub>Angelo Bordin</sub>](https://github.com/angelobordin) |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
