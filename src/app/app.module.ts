@@ -1,20 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LayoutComponent } from './modules/layout/layout.component';
+import { ToastrModule } from "ngx-toastr";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { LayoutComponent } from "./modules/layout/layout.component";
+import { CadastroComponent } from "./modules/pages/colaborador/cadastro/cadastro.component";
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from "ngx-mask";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LayoutComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent, LayoutComponent, CadastroComponent],
+	imports: [NgxMaskDirective, NgxMaskPipe, BrowserModule, BrowserAnimationsModule, AppRoutingModule, ToastrModule.forRoot(), FormsModule, HttpClientModule, ReactiveFormsModule, CommonModule],
+	providers: [provideNgxMask()],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
