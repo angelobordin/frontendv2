@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LayoutComponent } from "./modules/layout/layout.component";
 import { CadastroComponent } from "./modules/pages/colaborador/cadastro/cadastro.component";
+import { ListaComponent } from "./modules/pages/ponto-eletronico/lista/lista.component";
 
 const routes: Routes = [
 	{
@@ -11,6 +12,10 @@ const routes: Routes = [
 			{
 				path: "cadastro",
 				component: CadastroComponent,
+			},
+			{
+				path: "registros",
+				component: ListaComponent,
 			},
 		],
 	},
