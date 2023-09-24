@@ -13,9 +13,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from "ngx-mask";
 import { ListaComponent } from "./modules/pages/ponto-eletronico/lista/lista.component";
 import { TableModule } from "primeng/table";
+import { RegistrarComponent } from './modules/pages/ponto-eletronico/registrar/registrar.component';
 
 @NgModule({
-	declarations: [AppComponent, LayoutComponent, CadastroComponent, ListaComponent],
+	declarations: [AppComponent, LayoutComponent, CadastroComponent, ListaComponent, RegistrarComponent],
 	imports: [
 		NgxMaskDirective,
 		NgxMaskPipe,
