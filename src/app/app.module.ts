@@ -11,10 +11,24 @@ import { CadastroComponent } from "./modules/pages/colaborador/cadastro/cadastro
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from "ngx-mask";
+import { ListaComponent } from "./modules/pages/ponto-eletronico/lista/lista.component";
+import { TableModule } from "primeng/table";
 
 @NgModule({
-	declarations: [AppComponent, LayoutComponent, CadastroComponent],
-	imports: [NgxMaskDirective, NgxMaskPipe, BrowserModule, BrowserAnimationsModule, AppRoutingModule, ToastrModule.forRoot(), FormsModule, HttpClientModule, ReactiveFormsModule, CommonModule],
+	declarations: [AppComponent, LayoutComponent, CadastroComponent, ListaComponent],
+	imports: [
+		NgxMaskDirective,
+		NgxMaskPipe,
+		BrowserModule,
+		BrowserAnimationsModule,
+		AppRoutingModule,
+		ToastrModule.forRoot(),
+		FormsModule,
+		HttpClientModule,
+		ReactiveFormsModule,
+		CommonModule,
+		TableModule,
+	],
 	providers: [provideNgxMask()],
 	bootstrap: [AppComponent],
 })
