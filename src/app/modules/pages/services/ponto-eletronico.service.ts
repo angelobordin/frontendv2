@@ -2,13 +2,19 @@ import { Injectable } from "@angular/core";
 
 @Injectable({ providedIn: "root" })
 export class PontoEletronicoService {
-	private _registroName: string = "";
-
 	set registroName(value: string) {
-		this._registroName = value;
+		localStorage.setItem("registroName", value);
 	}
 
 	get registroName() {
-		return this._registroName;
+		return localStorage.getItem("registroName") ?? "";
+	}
+
+	set registroId(value: number) {
+		localStorage.setItem("registroId", value.toString());
+	}
+
+	get registroId(): number {
+		return parseInt(localStorage.getItem("registroId") ?? "");
 	}
 }
