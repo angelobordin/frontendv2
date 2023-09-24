@@ -4,6 +4,7 @@ import { LayoutComponent } from "./modules/layout/layout.component";
 import { CadastroComponent } from "./modules/pages/colaborador/cadastro/cadastro.component";
 import { ListaComponent } from "./modules/pages/ponto-eletronico/lista/lista.component";
 import { RegistrarComponent } from "./modules/pages/ponto-eletronico/registrar/registrar.component";
+import { ValidarComponent } from "./modules/pages/ponto-eletronico/validar/validar.component";
 
 const routes: Routes = [
 	{
@@ -27,6 +28,10 @@ const routes: Routes = [
 			{
 				path: "registrar",
 				component: RegistrarComponent,
+			},
+			{
+				path: "validar",
+				component: ValidarComponent,
 			},
 		],
 	},

@@ -1,14 +1,14 @@
 <div class="container">
     <form [formGroup]="form">
         <div class="row">
-            <div class="col-4 form-group">
+            <div class="col-12 col-sm-4 form-group">
                 <label for="name">Nome do Colaborador</label>
                 <input type="text" class="form-control" id="name" name="name" formControlName="name" maxlength="100">
                 <div class="inputError" *ngIf="this.form.get('name')?.invalid && this.form.get('name')?.touched">Nome do
                     colaborador
                     inválido</div>
             </div>
-            <div class="col-4 form-group">
+            <div class="col-12 col-sm-4 form-group">
                 <label for="email">E-mail</label>
                 <input type="email" class="form-control" name="email" id="email" formControlName="email" maxlength="100"
                     minlength="1">
@@ -17,7 +17,7 @@
                     colaborador
                     inválido</div>
             </div>
-            <div class="col-4 form-group">
+            <div class="col-12 col-sm-4 form-group">
                 <label for="cpf">CPF</label>
                 <input type="text" name="cpf" class="form-control" id="cpf" formControlName="cpf" maxlength="14"
                     mask="000.000.000-00">
@@ -27,22 +27,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6 form-group">
+            <div class="col-12 col-sm-6 form-group">
                 <label for="cellphone">Celular</label>
                 <input type="text" class="form-control" name="cellphone" id="cellphone" formControlName="cellphone"
                     maxlength="11" mask="(00) 00000-0000">
             </div>
-            <div class="col-6 form-group">
+            <div class="col-12 col-sm-6 form-group">
                 <label for="knowledge">Conhecimentos</label>
-                <!-- <div>
-                    <ul>
-                        <li *ngFor="let subtask of tasks">
-                            <mat-checkbox (change)="selectKnowledge(subtask.id)">
-                                {{subtask.name}}
-                            </mat-checkbox>
-                        </li>
-                    </ul>
-                </div> -->
+                <div class="card flex justify-content-center gap-3">
+                    <p-checkbox *ngFor="let task of tasks" name="groupname" value="{{ task.id }}"
+                        label="{{ task.name }}" (onChange)="selectKnowledge($event, task)"></p-checkbox>
+                </div>
+
             </div>
         </div>
 

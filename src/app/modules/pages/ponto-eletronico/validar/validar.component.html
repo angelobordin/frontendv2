@@ -1,0 +1,50 @@
+<div class="container">
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col-12 col-sm-4 form-group">
+                <label for="name">Nome do Colaborador</label>
+                <input type="text" class="form-control" id="name" name="name" formControlName="name" maxlength="100"
+                    [readOnly]="true">
+            </div>
+            <div class="col-12 col-sm-4 form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" name="email" id="email" formControlName="email" maxlength="100"
+                    [readOnly]="true" minlength="1">
+            </div>
+            <div class="col-12 col-sm-4 form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" class="form-control" id="cpf" formControlName="cpf" maxlength="14"
+                    [readOnly]="true" mask="000.000.000-00">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 form-group">
+                <label for="cellphone">Celular</label>
+                <input type="text" class="form-control" name="cellphone" id="cellphone" formControlName="cellphone"
+                    [readOnly]="true" maxlength="11" mask="(00) 00000-0000">
+            </div>
+            <!-- <div class="col-12 col-sm-6 form-group">
+                <label for="knowledge">Conhecimentos</label>
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="knowledge">Conhecimentos</label>
+                    <div class="card flex justify-content-center gap-3">
+                        <p-checkbox [disabled]="true" *ngFor="let task of tasks" name="groupname" value="{{ task.id }}"
+                            label="{{ task.name }}" trueValue="3"></p-checkbox>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+            <button *ngIf="!this.form.value['validate']" class="btn btn-success m-2" type="submit" (click)="validate()">
+                Validar
+            </button>
+            <button *ngIf="this.form.value['validate']" class="btn btn-danger m-2" type="submit" (click)="invalidate()">
+                Invalidar
+            </button>
+            <button [disabled]="!this.form.valid" class="btn btn-primary m-2" type="submit" (click)="save()">
+                Salvar
+            </button>
+        </div>
+    </form>
+</div>

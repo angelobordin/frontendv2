@@ -11,6 +11,8 @@ import { ColaboradorService } from "../../services/colaborador.service";
 })
 export class CadastroComponent implements OnInit {
 	form!: FormGroup;
+	enableDialog: boolean = false;
+	colaboradorLink: string = "";
 	private _unsubscribeAll: Subject<any> = new Subject<any>();
 
 	constructor(private formBuilder: FormBuilder, private service: ColaboradorService, private toastr: ToastrService) {}
@@ -32,6 +34,8 @@ export class CadastroComponent implements OnInit {
 			.subscribe(
 				(res) => {
 					this.form.reset();
+					this.enableDialog = true;
+					this.colaboradorLink = res.data;
 					this.toastr.success("Sucesso", res.message, { timeOut: 3000 });
 				},
 				(err) => {
