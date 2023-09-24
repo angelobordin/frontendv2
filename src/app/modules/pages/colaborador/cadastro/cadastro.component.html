@@ -1,0 +1,34 @@
+<div class="container">
+    <form [formGroup]="form">
+
+        <div class="row">
+            <div class="col-6 form-group">
+                <label for="name">Nome do Colaborador</label>
+                <input type="text" class="form-control" id="name" name="name" formControlName="name" maxlength="100"
+                    minlength="1">
+                <div class="inputError" *ngIf="this.form.get('name')?.invalid && this.form.get('name')?.touched">Nome do
+                    colaborador
+                    inválido</div>
+            </div>
+            <div class="col-6 form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" class="form-control" id="cpf" formControlName="cpf" maxlength="14"
+                    mask="000.000.000-00">
+                <div class="inputError" *ngIf="this.form.get('cpf')?.invalid && this.form.get('cpf')?.touched">CPF do
+                    colaborador inválido</div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+            <button [disabled]="!this.form.valid" class="btn btn-primary" type="submit" (click)="registerColaborator()">
+                Cadastrar
+            </button>
+        </div>
+    </form>
+</div>
+
+<p-dialog header="Link para cadastro do PONTO ELETRÔNICO" [(visible)]="enableDialog" [style]="{width: '50vw'}">
+    <p>
+        {{ colaboradorLink }}
+    </p>
+</p-dialog>
