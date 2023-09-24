@@ -7,7 +7,7 @@
             <p-table #table [value]="registros" selectionMode="single" (selectionChange)="editRegistro($event)"
                 dataKey="cpf" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]"
                 styleClass="p-datatable-sm" [tableStyle]="{ 'min-width': '50rem' }" [loading]="loading"
-                [globalFilterFields]="['cpf', 'name', 'email', 'cellphone', 'validate']">
+                [globalFilterFields]="['cpf', 'name', 'email', 'cellphone', 'validate', 'active']">
                 <ng-template pTemplate="header">
                     <tr>
                         <th pSortableColumn="cpf">
@@ -40,6 +40,9 @@
                         <th>
                             <p-columnFilter type="boolean" field="active"></p-columnFilter>
                         </th>
+                        <th>
+                            <p-columnFilter type="boolean" field="active"></p-columnFilter>
+                        </th>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-registro>
@@ -47,7 +50,7 @@
                         <td>{{ registro.cpf | mask: "000.000.000-00" }}</td>
                         <td>{{ registro.name }}</td>
                         <td>{{ registro.email }}</td>
-                        <td>{{ registro.cellphone | mask: "+55 (00) 00000-0000" }}</td>
+                        <td>{{ registro.cellphone | mask: "(00) 00000-0000" }}</td>
                         <td>
                             <i class="pi"
                                 [ngClass]="{ 'text-green-500 pi-check-circle': registro.validate, 'text-red-500 pi-times-circle': !registro.validate }"></i>
