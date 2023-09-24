@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 import { Subject, takeUntil } from "rxjs";
-import { ColaboradorService } from "../../colaborador.service";
+import { ColaboradorService } from "../../services/colaborador.service";
 
 @Component({
 	selector: "app-cadastro",
@@ -17,8 +17,8 @@ export class CadastroComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.form = this.formBuilder.group({
-			name: ["", Validators.required],
-			cpf: ["", Validators.required],
+			name: ["", [Validators.required]],
+			cpf: ["", [Validators.required]],
 		});
 	}
 
