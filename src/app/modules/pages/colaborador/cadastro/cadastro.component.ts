@@ -39,7 +39,6 @@ export class CadastroComponent implements OnInit {
 					this.toastr.success("Sucesso", res.message, { timeOut: 3000 });
 				},
 				(err) => {
-					console.log(err);
 					this.toastr.error("Erro", err.error.message, { timeOut: 3000 });
 				}
 			);
