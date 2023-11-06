@@ -77,7 +77,7 @@ export class ValidarComponent {
 					this.toastr.success("Registro Salvo", res.message, { timeOut: 3000 });
 				},
 				(err: any) => {
-					this.toastr.error("Validado", err.message, { timeOut: 3000 });
+					this.toastr.error("Error", err.message, { timeOut: 3000 });
 				}
 			);
 		this.router.navigate(["/registros"]);

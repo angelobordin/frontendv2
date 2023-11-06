@@ -23,7 +23,7 @@
                 <input type="text" class="form-control" name="cellphone" id="cellphone" formControlName="cellphone"
                     [readOnly]="true" maxlength="11" mask="(00) 00000-0000">
             </div>
-            <!-- <div class="col-12 col-sm-6 form-group">
+            <div class="col-12 col-sm-6 form-group">
                 <label for="knowledge">Conhecimentos</label>
                 <div class="col-12 col-sm-6 form-group">
                     <label for="knowledge">Conhecimentos</label>
@@ -32,7 +32,7 @@
                             label="{{ task.name }}" trueValue="3"></p-checkbox>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <div style="display: flex; justify-content: flex-end;">
@@ -42,7 +42,7 @@
             <button *ngIf="this.form.value['validate']" class="btn btn-danger m-2" type="submit" (click)="invalidate()">
                 Invalidar
             </button>
-            <button [disabled]="!this.form.valid" class="btn btn-primary m-2" type="submit" (click)="save()">
+            <button class="btn btn-primary m-2" type="submit" (click)="save()">
                 Salvar
             </button>
         </div>
